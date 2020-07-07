@@ -27,7 +27,7 @@ for filename in os.listdir(dir):
 
         cid = open('clipclass.txt', 'r')
         totalCid = cid.read()
-        if (classIDL + ',') in totalCid:
+        if (classIDL + ',') in totalCid: #checks clipclass.txt for current clip class
             continue
         else:
             cid = open('clipClass.txt', 'a')
