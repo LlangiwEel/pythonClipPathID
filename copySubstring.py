@@ -25,8 +25,13 @@ for filename in os.listdir(dir):
         cpi = open('clipPathIds.txt', 'a') #opens .txt in append mode
         cpi.write(clipPathString) #appends clip path IDs into .txt
 
-        cid = open('clipClass.txt', 'a')
-        cid.write('.' + classIDL + ',' + '\n')
+        cid = open('clipclass.txt', 'r')
+        totalCid = cid.read()
+        if (classIDL + ',') in totalCid:
+            continue
+        else:
+            cid = open('clipClass.txt', 'a')
+            cid.write('.' + classIDL + ',' + '\n')
 
         #hxt = open('hextileStrings.txt', 'a')
         #hxt.write('import ' + classIDU + ' from ".tiles/' + classIDU + '.svelte"\n')

@@ -1,0 +1,4 @@
+.desertdunesOasis,
+.desertdunesPyramids,
+.desertdunesRuins,
+.dirtCastle,
